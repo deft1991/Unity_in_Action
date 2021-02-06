@@ -11,13 +11,13 @@ public class MouseLook : MonoBehaviour
         MouseY = 2
     }
 
-    public RotationAxes axes = RotationAxes.MouseXAndY;
+    [SerializeField] private RotationAxes axes = RotationAxes.MouseXAndY;
 
-    public float sensitivityHor = 9.0f;
-    public float sensitivityVert = 9.0f;
+    [SerializeField] private float sensitivityHor = 9.0f;
+    [SerializeField] private float sensitivityVert = 9.0f;
 
-    public float maximumVert = 45f;
-    public float minimumVert = -45f;
+    [SerializeField] private float maximumVert = 45f;
+    [SerializeField] private float minimumVert = -45f;
 
     private float _rotationX = 0;
 
