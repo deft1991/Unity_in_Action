@@ -171,6 +171,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f33ceb5aed52049de9a5b026086f13f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 6
+  gravity: -9.8
 --- !u!23 &10735163
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -233,7 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c40bb831bdc4e4c42a98d6e68f417fdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axes: 2
+  axes: 1
   sensitivityHor: 9
   sensitivityVert: 9
   maximumVert: 45
@@ -1092,6 +1094,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
+  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1181,6 +1184,18 @@ MonoBehaviour:
   sensitivityVert: 9
   maximumVert: 45
   minimumVert: -45
+--- !u!114 &963194230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58607ddc6cfc407381f5906c9633450e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1037106357
 GameObject:
   m_ObjectHideFlags: 0
