@@ -1,10 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MouseLook : MonoBehaviour
 {
-    public RotationAxes axes = RotationAxes.MouseXAndX;
+    public RotationAxes axes = RotationAxes.MouseXAndY;
 
     public float sensitivityHor = 9.0F;
     public float sensitivityVert = 9.0F;
@@ -47,8 +48,10 @@ public class MouseLook : MonoBehaviour
                 VerticalRotation();
                 break;
             }
-            case RotationAxes.MouseXAndX:
+            case RotationAxes.MouseXAndY:
             {
+                // HorizontalRotation();
+                // VerticalRotation();
                 CombineRotation();
                 break;
             }
@@ -73,7 +76,7 @@ public class MouseLook : MonoBehaviour
       */
     private void HorizontalRotation()
     {
-        transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityHor, 0);
+        Camera.main.transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityHor, 0);
     }
 
     /**
@@ -81,9 +84,10 @@ public class MouseLook : MonoBehaviour
      */
     private void VerticalRotation()
     {
+        var cameraTransform = Camera.main.transform;
         _rotationX -= Input.GetAxis("Mouse Y") * sensitivityVert;
         _rotationX = Mathf.Clamp(_rotationX, minimumVert, maximumVert);
-        float rotationY = transform.localEulerAngles.y;
-        transform.localEulerAngles = new Vector3(_rotationX, rotationY, 0);
+        float rotationY = cameraTransform.localEulerAngles.y;
+        Camera.main.transform.localEulerAngles = new Vector3(_rotationX, rotationY, 0);
     }
 }

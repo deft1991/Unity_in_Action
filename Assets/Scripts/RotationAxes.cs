@@ -1,6 +1,6 @@
 public enum RotationAxes
 {
-    MouseXAndX = 0,
+    MouseXAndY = 0,
     MouseX = 1,
     MouseY = 2,
 }
