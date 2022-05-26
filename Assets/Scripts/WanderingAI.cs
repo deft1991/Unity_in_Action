@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class WanderingAI : MonoBehaviour
 {
+    [SerializeField] private GameObject fireballPrefab;
+
+    private GameObject _fireball;
+
     /*
-     * Скорость движения
+     * Скорость движения врага
      */
     private float speed = 3.0f;
+
+    private float fireballDistance = 1.5f;
 
     private bool _alive;
 
@@ -49,16 +55,45 @@ public class WanderingAI : MonoBehaviour
          */
         if (Physics.SphereCast(ray, 0.75f, out hit))
         {
-            if (hit.distance < obstacleRange)
+            GameObject hitObject = hit.transform.gameObject;
+            /*
+             * понимаем что это поподание в игрока
+             */
+            if (hitObject.GetComponent<PlayerCharacter>())
             {
-                /*
-                 * поворот с наполовину случайным выбором нового направления
-                 * наполовину случайным, потому что значения ограничены минимум и максимумом
-                 * 
-                 */
-                float angle = Random.Range(-110, 110);
-                transform.Rotate(0, angle, 0);
+                ThrowFireball();
             }
+            else if (hit.distance < obstacleRange)
+            {
+                RotateEnemy();
+            }
+        }
+    }
+
+    /**
+     * поворот с наполовину случайным выбором нового направления
+     * наполовину случайным, потому что значения ограничены минимум и максимумом
+     */
+    private void RotateEnemy()
+    {
+        float angle = Random.Range(-110, 110);
+        transform.Rotate(0, angle, 0);
+    }
+
+    private void ThrowFireball()
+    {
+        if (_fireball == null)
+        {
+            /*
+             * create fireball from prefab
+             */
+            _fireball = Instantiate(fireballPrefab);
+
+            /*
+             * send fireball in the same direction as enemy right now 
+             */
+            _fireball.transform.position = transform.TransformPoint(Vector3.forward * fireballDistance);
+            _fireball.transform.rotation = transform.rotation;
         }
     }
 

@@ -76,7 +76,7 @@ public class MouseLook : MonoBehaviour
       */
     private void HorizontalRotation()
     {
-        Camera.main.transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityHor, 0);
+        transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityHor, 0);
     }
 
     /**
