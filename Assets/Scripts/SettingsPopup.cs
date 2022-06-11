@@ -43,5 +43,6 @@ public class SettingsPopup : MonoBehaviour
     {
         Debug.Log("change speed: " + speed);
         PlayerPrefs.SetFloat("speed", speed);
+        Messenger<float>.Broadcast(GameEvent.SPEED_CHANGED, speed);
     }
 }

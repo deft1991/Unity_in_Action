@@ -15,6 +15,23 @@ public class FPSInput : MonoBehaviour
     private PhotonView _photonView;
     private CharacterController _characterController;
 
+    private float baseSpeed = 6.0f;
+
+    private void Awake()
+    {
+        Messenger<float>.AddListener(GameEvent.SPEED_CHANGED, OnSpeedChanged);
+    }
+
+    private void OnSpeedChanged(float value)
+    {
+        speed = baseSpeed * value;
+    }
+
+    private void OnDestroy()
+    {
+        Messenger<float>.RemoveListener(GameEvent.SPEED_CHANGED, OnSpeedChanged);
+    }
+
     // Start is called before the first frame update
     void Start()
     {

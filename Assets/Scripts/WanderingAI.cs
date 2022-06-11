@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class WanderingAI : MonoBehaviour
 {
@@ -21,6 +23,26 @@ public class WanderingAI : MonoBehaviour
      * расстояние с которого начинается реакция на препядствия
      */
     private float obstacleRange = 5.0f;
+    
+    /*
+     * Base enemies speed. Configure by speed slider
+     */
+    private const float baseSpeed = 3.0f;
+
+    private void Awake()
+    {
+        Messenger<float>.AddListener(GameEvent.SPEED_CHANGED, OnSpeedChanged);
+    }
+
+    private void OnDestroy()
+    {
+        Messenger<float>.RemoveListener(GameEvent.SPEED_CHANGED, OnSpeedChanged);
+    }
+
+    private void OnSpeedChanged(float value)
+    {
+        speed = baseSpeed * value;
+    }
 
     // Start is called before the first frame update
     void Start()
