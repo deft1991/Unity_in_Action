@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class RayShooter : MonoBehaviour
 {
@@ -21,8 +22,8 @@ public class RayShooter : MonoBehaviour
         /*
          * Скрываем указатель мыши в центре экрана
          */
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        // Cursor.lockState = CursorLockMode.Locked;
+        // Cursor.visible = false;
     }
 
     private void OnGUI()
@@ -41,7 +42,7 @@ public class RayShooter : MonoBehaviour
         /*
          * Реакция на нажатие кнопки мыши
          */
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
             /*
              * Середина экрана - это половина его ширины и высоты
@@ -72,6 +73,10 @@ public class RayShooter : MonoBehaviour
                 {
                  Debug.Log("Target hit");
                  reactiveTarget.ReactToHit();
+                 /*
+                  * Broadcast ENEMY_HIT event
+                  */
+                 Messenger.Broadcast(GameEvent.ENEMY_HIT);
                 }
                 else
                 {
