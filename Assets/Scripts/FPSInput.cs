@@ -12,7 +12,7 @@ public class FPSInput : MonoBehaviour
     public float gravity = -9.8F;
     public float playerJumpHeight = 2;
 
-    private PhotonView _photonView;
+    // private PhotonView _photonView;
     private CharacterController _characterController;
 
     private float baseSpeed = 6.0f;
@@ -36,7 +36,7 @@ public class FPSInput : MonoBehaviour
     void Start()
     {
         _characterController = GetComponent<CharacterController>();
-        _photonView = GetComponent<PhotonView>();
+        // _photonView = GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
@@ -48,10 +48,10 @@ public class FPSInput : MonoBehaviour
          * so we’ll create a player object for each player when they join the room.
          * However, we don’t want other users controlling our local character.
          */
-        if (_photonView.IsMine)
-        {
+        // if (_photonView.IsMine)
+        // {
             Move();
-        }
+        // }
     }
 
     private void Move()
