@@ -12,6 +12,12 @@ public class CollectableItem : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Item collected: " + itemName);
+        
+        /*
+         * Add item to inventory 
+         */
+        Managers.Inventory.AddItem(itemName);
+        
         /*
          * If call this --> destroy script without game object
          * have to destroy game object
