@@ -8,12 +8,14 @@ public class NetworkService : MonoBehaviour
 {
     /*
      * URL for request weather
-     * API key - 47f8a39ab2adaaee0af9515f2cc7b351
      */
     private const string xmlApi =
         "https://api.openweathermap.org/data/2.5/weather?q=Los%20Angeles,us&mode=xml&APPID=47f8a39ab2adaaee0af9515f2cc7b351";
+
     private const string jsonApi =
         "https://api.openweathermap.org/data/2.5/weather?q=Los%20Angeles,us&APPID=47f8a39ab2adaaee0af9515f2cc7b351";
+
+    private const string webImage = "https://pbs.twimg.com/media/FTQnAbqUUAABGVW?format=jpg&name=large";
 
     public IEnumerator GetWeatherXML(Action<string> callback)
     {
@@ -24,6 +26,21 @@ public class NetworkService : MonoBehaviour
     {
         return CallAPI(jsonApi, callback);
     }
+
+    /**
+     * Uses Texture2D ass callback parameter
+     */
+    public IEnumerator DownloadImage(Action<Texture2D> callback)
+    {
+        UnityWebRequest request = UnityWebRequestTexture.GetTexture(webImage);
+        yield return request.SendWebRequest();
+
+        /*
+         * Get downloaded image we service program DownloadHandler
+         */
+        callback(DownloadHandlerTexture.GetContent(request));
+    }
+
 
     private IEnumerator CallAPI(string url, Action<string> callback)
     {
@@ -43,7 +60,8 @@ public class NetworkService : MonoBehaviour
             if (request.result == UnityWebRequest.Result.ConnectionError)
             {
                 Debug.Log("network problem: " + request.error);
-            } else if (request.responseCode != (long) System.Net.HttpStatusCode.OK)
+            }
+            else if (request.responseCode != (long)System.Net.HttpStatusCode.OK)
             {
                 Debug.Log("response error: " + request.responseCode);
             }
