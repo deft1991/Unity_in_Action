@@ -9,7 +9,17 @@ public class WeatherController : MonoBehaviour
     [SerializeField] private Light sun;
 
     private float _fullIntensity;
-    private float _cloudValue = 0f;
+    private static readonly int Blend = Shader.PropertyToID("_Blend");
+
+    private void Awake()
+    {
+        Messenger.AddListener(GameEvent.WEATHER_UPDATED, OnWeatherUpdated);
+    }
+
+    private void OnDestroy()
+    {
+        Messenger.RemoveListener(GameEvent.WEATHER_UPDATED, OnWeatherUpdated);
+    }
 
     private void Start()
     {
@@ -19,15 +29,11 @@ public class WeatherController : MonoBehaviour
         _fullIntensity = sun.intensity;
     }
 
-    private void Update()
+    private void OnWeatherUpdated()
     {
-        SetOvercast(_cloudValue);
-        /*
-         * Increase it to have soft slide
-         */
-        _cloudValue += .0005f;
+        SetOvercast(Managers.Weather.cloudValue);
     }
-
+    
     private void SetOvercast(float value)
     {
         /*
@@ -36,7 +42,7 @@ public class WeatherController : MonoBehaviour
          * Increase blend, reduce light
          * Reduce blend, increase light
          */
-        sky.SetFloat("_Blend", value);
+        sky.SetFloat(Blend, value);
         sun.intensity = _fullIntensity - (_fullIntensity * value);
     }
 }
