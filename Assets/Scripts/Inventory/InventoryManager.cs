@@ -5,10 +5,11 @@ using UnityEngine;
 public class InventoryManager : MonoBehaviour, IGameManager
 {
     public ManagerStatus status { get; private set; }
+    public string EquippedItem { get; private set; }
 
     private Dictionary<string, int> _items;
 
-    public void Startup()
+    public void Startup(NetworkService networkService)
     {
         Debug.Log("Inventory manager starting...");
 
@@ -52,6 +53,32 @@ public class InventoryManager : MonoBehaviour, IGameManager
         DisplayItems();
     }
 
+    public bool ConsumeItem(string itemName)
+    {
+        /*
+         * Check that we have needed element
+         */
+        if (_items.ContainsKey(itemName))
+        {
+            _items[itemName]--;
+            /*
+             * Remove item if was used last one
+             */
+            if (_items[itemName] == 0)
+            {
+                _items.Remove(itemName);
+            }
+        }
+        else
+        {
+            Debug.Log("Cannot consume: " + itemName);
+            return false;
+        }
+
+        DisplayItems();
+        return true;
+    }
+
     /**
      * Return all keys in dictionary
      */
@@ -72,5 +99,19 @@ public class InventoryManager : MonoBehaviour, IGameManager
         }
 
         return 0;
+    }
+
+    public bool EquipItem(string itemName)
+    {
+        if (_items.ContainsKey(itemName) && EquippedItem != itemName)
+        {
+            EquippedItem = itemName;
+            Debug.Log("Equipped: " + itemName);
+            return true;
+        }
+
+        EquippedItem = null;
+        Debug.Log("Unequipped");
+        return false;
     }
 }

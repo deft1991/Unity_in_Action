@@ -10,9 +10,7 @@ public class PlayerManager : MonoBehaviour, IGameManager
     public int maxHealth { get; private set; }
     
     
-    
-    
-    public void Startup()
+    public void Startup(NetworkService networkService)
     {
         Debug.Log("Player manager starting..");
 
