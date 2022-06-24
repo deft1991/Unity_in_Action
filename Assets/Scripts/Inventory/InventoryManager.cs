@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour, IGameManager
 {
-    public ManagerStatus status { get; private set; }
+    public ManagerStatus Status { get; private set; }
     public string EquippedItem { get; private set; }
 
     private Dictionary<string, int> _items;
@@ -15,7 +15,8 @@ public class InventoryManager : MonoBehaviour, IGameManager
 
         _items = new Dictionary<string, int>();
 
-        status = ManagerStatus.Started;
+        Status = ManagerStatus.Started;
+        Debug.Log("InventoryManager: started");
     }
 
     /**

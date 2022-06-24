@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class WeatherManager : MonoBehaviour, IGameManager
 {
-    public ManagerStatus status { get; private set; }
+    public ManagerStatus Status { get; private set; }
 
     private NetworkService _networkService;
 
@@ -28,7 +28,7 @@ public class WeatherManager : MonoBehaviour, IGameManager
          */
         StartCoroutine(_networkService.GetWeatherJSON(OnJSONDataLoaded));
 
-        status = ManagerStatus.Initializing;
+        Status = ManagerStatus.Initializing;
     }
 
     /**
@@ -67,7 +67,8 @@ public class WeatherManager : MonoBehaviour, IGameManager
         }
 
         Messenger.Broadcast(GameEvent.WEATHER_UPDATED);
-        status = ManagerStatus.Started;
+        Status = ManagerStatus.Started;
+        Debug.Log("WeatherManager: started");
     }
 
     public void OnJSONDataLoaded(string data)

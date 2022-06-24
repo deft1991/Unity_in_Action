@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour, IGameManager
 {
     
-    public ManagerStatus status { get; private set; }
+    public ManagerStatus Status { get; private set; }
     public int health { get; private set; }
     public int maxHealth { get; private set; }
     
@@ -17,7 +17,8 @@ public class PlayerManager : MonoBehaviour, IGameManager
         health = 50;
         maxHealth = 100;
         
-        status = ManagerStatus.Started;
+        Status = ManagerStatus.Started;
+        Debug.Log("PlayerManager: started");
     }
 
     public void ChangeHealth(int value)

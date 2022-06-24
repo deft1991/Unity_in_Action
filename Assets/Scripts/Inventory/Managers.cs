@@ -9,11 +9,13 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerManager))]
 [RequireComponent(typeof(InventoryManager))]
 [RequireComponent(typeof(WeatherManager))]
+[RequireComponent(typeof(ImagesManager))]
 public class Managers : MonoBehaviour
 {
     public static PlayerManager Player { get; private set; }
     public static InventoryManager Inventory { get; private set; }
     public static WeatherManager Weather { get; private set; }
+    public static ImagesManager Images { get; private set; }
 
     /*
      * List of all IGameManagers
@@ -29,11 +31,13 @@ public class Managers : MonoBehaviour
         Player = GetComponent<PlayerManager>();
         Inventory = GetComponent<InventoryManager>();
         Weather = GetComponent<WeatherManager>();
+        Images = GetComponent<ImagesManager>();
 
         _startSequence = new List<IGameManager>();
         _startSequence.Add(Player);
         _startSequence.Add(Inventory);
         _startSequence.Add(Weather);
+        _startSequence.Add(Images);
 
         StartCoroutine(StartupManagers());
     }
@@ -60,7 +64,7 @@ public class Managers : MonoBehaviour
             numReady = 0;
             foreach (IGameManager gameManager in _startSequence)
             {
-                if (ManagerStatus.Started == gameManager.status)
+                if (ManagerStatus.Started == gameManager.Status)
                 {
                     numReady++;
                 }
