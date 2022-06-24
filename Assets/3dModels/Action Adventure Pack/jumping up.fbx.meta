@@ -1,0 +1,619 @@
+fileFormatVersion: 2
+guid: 96c157ff6376c485da9daa535b92a22f
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: jumpingUp
+      takeName: mixamo.com
+      internalID: -203655887218126122
+      firstFrame: 0
+      lastFrame: 7
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: TATINEW:Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TATINEW:LeftUpLeg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TATINEW:RightUpLeg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TATINEW:LeftLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TATINEW:RightLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TATINEW:LeftFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TATINEW:RightFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TATINEW:Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TATINEW:Spine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TATINEW:Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TATINEW:Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TATINEW:LeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TATINEW:RightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TATINEW:LeftArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TATINEW:RightArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TATINEW:LeftForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TATINEW:RightForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TATINEW:LeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TATINEW:RightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TATINEW:LeftToeBase
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TATINEW:RightToeBase
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TATINEW:LeftHandIndex1
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TATINEW:LeftHandIndex2
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TATINEW:LeftHandIndex3
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TATINEW:LeftHandThumb1
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TATINEW:LeftHandThumb2
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TATINEW:LeftHandThumb3
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TATINEW:RightHandThumb1
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TATINEW:RightHandThumb2
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TATINEW:RightHandThumb3
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TATINEW:RightHandIndex1
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TATINEW:RightHandIndex2
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TATINEW:RightHandIndex3
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TATINEW:Spine2
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: jumping up(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:Hips
+      parentName: jumping up(Clone)
+      position: {x: 0.0032576434, y: 0.4703403, z: -0.0021875154}
+      rotation: {x: -0.04574028, y: 0.10850349, z: -0.016813546, w: 0.99290085}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:Spine
+      parentName: TATINEW:Hips
+      position: {x: -0, y: 0.075619996, z: -0.009722999}
+      rotation: {x: -0.013352104, y: -0.04041946, z: 0.00821245, w: 0.99905986}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:Spine1
+      parentName: TATINEW:Spine
+      position: {x: -0, y: 0.08895, z: 0}
+      rotation: {x: 0.10064315, y: -0.0828089, z: 0.008067932, w: 0.9914376}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:Spine2
+      parentName: TATINEW:Spine1
+      position: {x: -0, y: 0.101656996, z: 0}
+      rotation: {x: 0.10064319, y: -0.08280889, z: 0.008067931, w: 0.9914376}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:Neck
+      parentName: TATINEW:Spine2
+      position: {x: -0, y: 0.114364, z: 0}
+      rotation: {x: 0.051389277, y: 0.0037181848, z: -0.0005023082, w: 0.99867165}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:Head
+      parentName: TATINEW:Neck
+      position: {x: -0, y: 0.095635004, z: -0.005744}
+      rotation: {x: -0.012523185, y: 0.0036784688, z: -0.0007388535, w: 0.9999146}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:HeadTop_End
+      parentName: TATINEW:Head
+      position: {x: -0, y: 0.70762396, z: -0.042501}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:LeftShoulder
+      parentName: TATINEW:Spine2
+      position: {x: -0.045799997, y: 0.097271, z: -0.0016529999}
+      rotation: {x: 0.573944, y: -0.41681013, z: 0.54395735, w: 0.4482947}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:LeftArm
+      parentName: TATINEW:LeftShoulder
+      position: {x: -0, y: 0.09178, z: 0}
+      rotation: {x: -0.11679682, y: 0.1408604, z: -0.08385804, w: 0.97953296}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:LeftForeArm
+      parentName: TATINEW:LeftArm
+      position: {x: -0, y: 0.183882, z: 0}
+      rotation: {x: -0.014595229, y: -0.05602517, z: -0.026324976, w: 0.9979756}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:LeftHand
+      parentName: TATINEW:LeftForeArm
+      position: {x: -0, y: 0.12666, z: 0}
+      rotation: {x: -0.13438433, y: 0.47579253, z: -0.108141266, w: 0.8624777}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:LeftHandThumb1
+      parentName: TATINEW:LeftHand
+      position: {x: 0.0054470003, y: 0.022032, z: 0}
+      rotation: {x: 0.1546141, y: -0.08301043, z: -0.0127584385, w: 0.98439884}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:LeftHandThumb2
+      parentName: TATINEW:LeftHandThumb1
+      position: {x: -0.007467, y: 0.016549999, z: 0}
+      rotation: {x: -0.0015145325, y: 0.0004565793, z: 0.4198197, w: 0.9076061}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:LeftHandThumb3
+      parentName: TATINEW:LeftHandThumb2
+      position: {x: 0.008234999, y: 0.01674, z: 0}
+      rotation: {x: 0.00044748472, y: 0.0021516716, z: -0.24945156, w: 0.9683848}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:LeftHandThumb4
+      parentName: TATINEW:LeftHandThumb3
+      position: {x: -0.000769, y: 0.016331, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:LeftHandIndex1
+      parentName: TATINEW:LeftHand
+      position: {x: -0, y: 0.029447999, z: 0.0017789999}
+      rotation: {x: 0.07492919, y: -0.014353865, z: 0.010909708, w: 0.9970259}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:LeftHandIndex2
+      parentName: TATINEW:LeftHandIndex1
+      position: {x: -0.004824, y: 0.028538998, z: 0}
+      rotation: {x: 0.006515215, y: -0.00781418, z: 0.16547199, w: 0.98616207}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:LeftHandIndex3
+      parentName: TATINEW:LeftHandIndex2
+      position: {x: 0.002592, y: 0.027706001, z: 0}
+      rotation: {x: 0.00008442694, y: 0.0008602623, z: 0.0044832155, w: 0.99998957}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:LeftHandIndex4
+      parentName: TATINEW:LeftHandIndex3
+      position: {x: 0.002232, y: 0.021752998, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:RightShoulder
+      parentName: TATINEW:Spine2
+      position: {x: 0.045799997, y: 0.097408, z: -0.002725}
+      rotation: {x: 0.58675146, y: 0.43922627, z: -0.5652405, w: 0.37855795}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:RightArm
+      parentName: TATINEW:RightShoulder
+      position: {x: -0, y: 0.09178, z: 0}
+      rotation: {x: -0.124879725, y: -0.0721934, z: -0.07731685, w: 0.9865168}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:RightForeArm
+      parentName: TATINEW:RightArm
+      position: {x: -0, y: 0.183924, z: 0}
+      rotation: {x: -0.010483525, y: -0.03786018, z: 0.03208139, w: 0.99871296}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:RightHand
+      parentName: TATINEW:RightForeArm
+      position: {x: -0, y: 0.12674199, z: 0}
+      rotation: {x: 0.13795827, y: -0.5479246, z: -0.008094104, w: 0.8250337}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:RightHandThumb1
+      parentName: TATINEW:RightHand
+      position: {x: -0.0104519995, y: 0.020487001, z: 0}
+      rotation: {x: 0.22570816, y: -0.14568566, z: 0.3358528, w: 0.9027926}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:RightHandThumb2
+      parentName: TATINEW:RightHandThumb1
+      position: {x: 0.0060229995, y: 0.017385, z: 0}
+      rotation: {x: -0.033667855, y: -0.002576261, z: -0.34134123, w: 0.9393327}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:RightHandThumb3
+      parentName: TATINEW:RightHandThumb2
+      position: {x: -0.006157, y: 0.016839, z: 0}
+      rotation: {x: -0.0018642718, y: 0.010831723, z: 0.17911173, w: 0.98376733}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:RightHandThumb4
+      parentName: TATINEW:RightHandThumb3
+      position: {x: 0.000133, y: 0.013782, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:RightHandIndex1
+      parentName: TATINEW:RightHand
+      position: {x: -0, y: 0.029435, z: 0.000648}
+      rotation: {x: -0.07705873, y: 0.009347438, z: 0.049538795, w: 0.99575126}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:RightHandIndex2
+      parentName: TATINEW:RightHandIndex1
+      position: {x: 0.001222, y: 0.031146, z: 0}
+      rotation: {x: 0.003924719, y: 0.0003072665, z: -0.070908435, w: 0.997475}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:RightHandIndex3
+      parentName: TATINEW:RightHandIndex2
+      position: {x: -0.00074399996, y: 0.024147999, z: 0}
+      rotation: {x: -0.0000066088746, y: 0.00024749464, z: 0.004091547, w: 0.9999916}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:RightHandIndex4
+      parentName: TATINEW:RightHandIndex3
+      position: {x: -0.00047899998, y: 0.021175, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:LeftUpLeg
+      parentName: TATINEW:Hips
+      position: {x: -0.108844005, y: -0.041929, z: -0.009823999}
+      rotation: {x: -0.07622205, y: 0.057709076, z: 0.99430084, w: 0.047177885}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:LeftLeg
+      parentName: TATINEW:LeftUpLeg
+      position: {x: -0, y: 0.199988, z: 0}
+      rotation: {x: -0.33373725, y: -0.12435801, z: 0.036677998, w: 0.9337073}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:LeftFoot
+      parentName: TATINEW:LeftLeg
+      position: {x: -0, y: 0.153906, z: 0}
+      rotation: {x: 0.5591924, y: -0.031127945, z: -0.06190634, w: 0.8261371}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:LeftToeBase
+      parentName: TATINEW:LeftFoot
+      position: {x: -0, y: 0.110372, z: 0}
+      rotation: {x: 0.44526777, y: 0.07845697, z: -0.024313087, w: 0.8916221}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:LeftToe_End
+      parentName: TATINEW:LeftToeBase
+      position: {x: -0, y: 0.041118998, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:RightUpLeg
+      parentName: TATINEW:Hips
+      position: {x: 0.108844005, y: -0.041929, z: -0.011132999}
+      rotation: {x: 0.11984732, y: -0.053947102, z: 0.97926563, w: -0.15415967}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:RightLeg
+      parentName: TATINEW:RightUpLeg
+      position: {x: -0, y: 0.19998899, z: 0}
+      rotation: {x: -0.2137679, y: -0.07608921, z: -0.017783085, w: 0.9737543}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:RightFoot
+      parentName: TATINEW:RightLeg
+      position: {x: -0, y: 0.154093, z: 0}
+      rotation: {x: 0.53167385, y: 0.14956859, z: -0.11849118, w: 0.8251739}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:RightToeBase
+      parentName: TATINEW:RightFoot
+      position: {x: -0, y: 0.111912, z: 0}
+      rotation: {x: 0.43157998, y: -0.09806538, z: 0.045659397, w: 0.8955653}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TATINEW:RightToe_End
+      parentName: TATINEW:RightToeBase
+      position: {x: -0, y: 0.043411, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
