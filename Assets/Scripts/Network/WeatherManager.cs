@@ -84,4 +84,14 @@ public class WeatherManager : MonoBehaviour, IGameManager
 
         Messenger.Broadcast(GameEvent.WEATHER_UPDATED);
     }
+
+    public void LogWeather(string name)
+    {
+        StartCoroutine(_networkService.LogWeather(name, cloudValue, OnLogged));
+    }
+
+    private void OnLogged(string response)
+    {
+        Debug.Log(response);
+    }
 }
