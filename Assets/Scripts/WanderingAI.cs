@@ -27,7 +27,7 @@ public class WanderingAI : MonoBehaviour
     /*
      * Base enemies speed. Configure by speed slider
      */
-    private const float baseSpeed = 3.0f;
+    private const float BaseSpeed = 3.0f;
 
     private void Awake()
     {
@@ -41,7 +41,7 @@ public class WanderingAI : MonoBehaviour
 
     private void OnSpeedChanged(float value)
     {
-        speed = baseSpeed * value;
+        speed = BaseSpeed * value;
     }
 
     // Start is called before the first frame update

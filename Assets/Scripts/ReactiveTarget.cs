@@ -44,5 +44,8 @@ public class ReactiveTarget : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
 
         Destroy(this.gameObject);
+        
+        // todo can add decrease enemies
+        
     }
 }

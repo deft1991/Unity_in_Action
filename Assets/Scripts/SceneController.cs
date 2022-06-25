@@ -35,7 +35,7 @@ public class SceneController : MonoBehaviour
             _enemy.transform.position = new Vector3(0, 1, 0);
             float angel = Random.Range(0, 360);
             _enemy.transform.Rotate(0, angel, 0);
-            // _enemyCount++;
+            _enemyCount++;
         }
     }
 }
