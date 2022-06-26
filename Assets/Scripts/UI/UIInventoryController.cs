@@ -9,15 +9,20 @@ public class UIInventoryController : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI healthLabel;
     [SerializeField] private InventoryPopup popup;
+    [SerializeField] private TextMeshProUGUI levelEnging;
 
     private void Awake()
     {
         Messenger.AddListener(GameEvent.HEALTH_UPDATED, OnHealthUpdated);
+        Messenger.AddListener(GameEvent.LEVEL_COMPLETE, OnLevelComplete);
+        Messenger.AddListener(GameEvent.LEVEL_FAILED, OnLevelFailed);
     }
 
     private void OnDestroy()
     {
         Messenger.RemoveListener(GameEvent.HEALTH_UPDATED, OnHealthUpdated);
+        Messenger.RemoveListener(GameEvent.LEVEL_COMPLETE, OnLevelComplete);
+        Messenger.RemoveListener(GameEvent.LEVEL_FAILED, OnLevelFailed);
     }
 
     private void Start()
@@ -26,6 +31,8 @@ public class UIInventoryController : MonoBehaviour
          * Call it manually o start
          */
         OnHealthUpdated();
+        
+        levelEnging.gameObject.SetActive(false);
         
         /*
          * Initialize inventory popup as hide window
@@ -48,5 +55,55 @@ public class UIInventoryController : MonoBehaviour
     {
         string message = "Health: " + Managers.Player.health + "/" + Managers.Player.maxHealth;
         healthLabel.text = message;
+    }
+
+    private void OnLevelComplete()
+    {
+        StartCoroutine(CompleteLevel());
+    }
+
+    private IEnumerator CompleteLevel()
+    {
+        levelEnging.gameObject.SetActive(true);
+        levelEnging.text = "Level Complete!";
+
+        /*
+         * Wait for two seconds and go to the next level
+         */
+        yield return new WaitForSeconds(2);
+        
+        Managers.Mission.GoToNext();
+    }
+
+    private void OnLevelFailed()
+    {
+        StartCoroutine(FailLevel());
+    }
+
+    private IEnumerator FailLevel()
+    {
+        /*
+         * Use the same text field as in success level complete
+         */
+        levelEnging.gameObject.SetActive(true);
+        levelEnging.text = "Level Failed";
+
+        yield return new WaitForSeconds(2);
+        
+        Managers.Player.Respawn();
+        /*
+         * After 2 second reload current level again
+         */
+        Managers.Mission.RestartCurrentLevel();
+    }
+
+    public void SaveGame()
+    {
+        Managers.Data.SaveGameState();
+    }
+
+    public void LoadGame()
+    {
+        Managers.Data.LoadGameState();
     }
 }

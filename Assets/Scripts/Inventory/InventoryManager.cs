@@ -13,10 +13,30 @@ public class InventoryManager : MonoBehaviour, IGameManager
     {
         Debug.Log("Inventory manager starting...");
 
-        _items = new Dictionary<string, int>();
-
+        /*
+         * Initialize empty inventory
+         */
+        UpdateData(new Dictionary<string, int>());
+       
         Status = ManagerStatus.Started;
         Debug.Log("InventoryManager: started");
+    }
+
+    /*
+     * Updata data in inventory
+     */
+    public void UpdateData(Dictionary<string, int> items)
+    {
+        _items = items;
+
+    }
+
+    /*
+     * Get inventory data
+     */
+    public Dictionary<string, int> GetData()
+    {
+        return _items;
     }
 
     /**

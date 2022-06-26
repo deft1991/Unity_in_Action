@@ -12,6 +12,7 @@ using UnityEngine;
 [RequireComponent(typeof(ImagesManager))]
 [RequireComponent(typeof(AudioManager))]
 [RequireComponent(typeof(MissionManager))]
+[RequireComponent(typeof(DataManager))]
 public class Managers : MonoBehaviour
 {
     public static PlayerManager Player { get; private set; }
@@ -20,6 +21,7 @@ public class Managers : MonoBehaviour
     public static ImagesManager Images { get; private set; }
     public static AudioManager Audio { get; private set; }
     public static MissionManager Mission { get; private set; }
+    public static DataManager Data { get; private set; }
 
     /*
      * List of all IGameManagers
@@ -40,6 +42,7 @@ public class Managers : MonoBehaviour
         Images = GetComponent<ImagesManager>();
         Audio = GetComponent<AudioManager>();
         Mission = GetComponent<MissionManager>();
+        Data = GetComponent<DataManager>();
 
         _startSequence = new List<IGameManager>();
         _startSequence.Add(Player);
@@ -48,6 +51,10 @@ public class Managers : MonoBehaviour
         _startSequence.Add(Images);
         _startSequence.Add(Audio);
         _startSequence.Add(Mission);
+        /*
+         * MUST be last manager in loading
+         */
+        _startSequence.Add(Data);
 
         StartCoroutine(StartupManagers());
     }
