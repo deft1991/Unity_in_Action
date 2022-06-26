@@ -83,6 +83,8 @@ public class WeatherManager : MonoBehaviour, IGameManager
         Debug.Log("clouds value: " + cloudValue);
 
         Messenger.Broadcast(GameEvent.WEATHER_UPDATED);
+        Status = ManagerStatus.Started;
+        Debug.Log("WeatherManager: started");
     }
 
     public void LogWeather(string name)

@@ -99,21 +99,19 @@ public class NetworkService : MonoBehaviour
          * or
          * GET with URL
          */
-        using (UnityWebRequest request = (form == null) ? UnityWebRequest.Get(url) : UnityWebRequest.Post(url, form))
-        {
-            yield return request.SendWebRequest();
+        using UnityWebRequest request = (form == null) ? UnityWebRequest.Get(url) : UnityWebRequest.Post(url, form);
+        yield return request.SendWebRequest();
 
-            if (request.result == UnityWebRequest.Result.ConnectionError)
-            {
-                Debug.LogError("network problem: " + request.error);
-            } else if (request.responseCode != (long)System.Net.HttpStatusCode.OK)
-            {
-                Debug.LogError("response error: " + request.responseCode);
-            }
-            else
-            {
-                callback(request.downloadHandler.text);
-            }
+        if (request.result == UnityWebRequest.Result.ConnectionError)
+        {
+            Debug.LogError("network problem: " + request.error);
+        } else if (request.responseCode != (long)System.Net.HttpStatusCode.OK)
+        {
+            Debug.LogError("response error: " + request.responseCode);
+        }
+        else
+        {
+            callback(request.downloadHandler.text);
         }
     }
 
