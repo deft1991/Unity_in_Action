@@ -16,6 +16,7 @@ public class UIInventoryController : MonoBehaviour
         Messenger.AddListener(GameEvent.HEALTH_UPDATED, OnHealthUpdated);
         Messenger.AddListener(GameEvent.LEVEL_COMPLETE, OnLevelComplete);
         Messenger.AddListener(GameEvent.LEVEL_FAILED, OnLevelFailed);
+        Messenger.AddListener(GameEvent.GAME_COMPLETE, OnGameComplete);
     }
 
     private void OnDestroy()
@@ -23,6 +24,7 @@ public class UIInventoryController : MonoBehaviour
         Messenger.RemoveListener(GameEvent.HEALTH_UPDATED, OnHealthUpdated);
         Messenger.RemoveListener(GameEvent.LEVEL_COMPLETE, OnLevelComplete);
         Messenger.RemoveListener(GameEvent.LEVEL_FAILED, OnLevelFailed);
+        Messenger.RemoveListener(GameEvent.GAME_COMPLETE, OnGameComplete);
     }
 
     private void Start()
@@ -105,5 +107,11 @@ public class UIInventoryController : MonoBehaviour
     public void LoadGame()
     {
         Managers.Data.LoadGameState();
+    }
+    
+    private void OnGameComplete()
+    {
+        levelEnging.gameObject.SetActive(true);
+        levelEnging.text = "You Finished the Game!";
     }
 }

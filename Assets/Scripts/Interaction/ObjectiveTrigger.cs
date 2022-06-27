@@ -7,6 +7,6 @@ public class ObjectiveTrigger : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        Managers.Mission.GoToNext();
+        Managers.Mission.ReachObjective();
     }
 }
